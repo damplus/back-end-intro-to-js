@@ -1,10 +1,9 @@
 {
   "name": "back-end-intro-to-js-part-one",
   "version": "1.0.0",
-  "description": "An introduction to JS for back-end programmers.",
   "scripts": {
-    "build": "babel src --out-dir es5",
-    "watch": "babel --watch src --out-dir es5"
+    "build": "babel src --out-dir build",
+    "watch": "babel --watch src --out-dir build"
   },
   "devDependencies": {
     "babel-cli": "^6.7.7",

@@ -1,4 +1,4 @@
-The first thing you’ll need to do for any modern JavaScript application is create a *package.json* file in the top level of your project.  This fulfils a similar purpose to a POM file, gradle.properties file, requirements.txt, etc.  You can either create one by hand or get npm to do this for you by running *npm init*.  For now I would suggest doing it by hand as you won’t need a lot of the fields *npm init* creates.
+The first thing you’ll need to do for any modern JavaScript application is create a *package.json* file in the top level of your project.  This fulfils a similar purpose to a POM file, gradle.properties file, requirements.txt, etc.  You can either create one by hand or get npm to do this for you by running `npm init`.  For now I would suggest doing it by hand as you won’t need a lot of the fields `npm init` creates.
 
 ```javascript
 {
@@ -12,7 +12,7 @@ Having created a package.json you can start using npm to install packages.  To u
 
 `npm install babel-cli`
 
-This will install the Babel CLI.  You should be able to see it in the *node_modules* folder that npm has created.  However, this has only installed it locally.  If someone checks your project out from Git, they will have to run the same command.  The solution to this is to record babel as a dependency in your *package.json* file.  The easiest way to do this is via the *--save* and *--save-dev* flags of the npm install command.  As Babel is a development dependency (i.e. it is a tool used at development time and isn’t actually included in your final code), we will use the *--save-dev* flag.
+This will install the Babel CLI.  You should be able to see it in the *node_modules* folder that npm has created.  However, this has only installed it locally.  If someone checks your project out from Git, they will have to run the same command.  The solution to this is to record babel as a dependency in your *package.json* file.  The easiest way to do this is via the *--save* and *--save-dev* flags of the `npm install` command.  As Babel is a development dependency (i.e. it is a tool used at development time and isn’t actually included in your final code), we will use the *--save-dev* flag.
 
 `npm install babel-cli --save-dev`
 
@@ -27,9 +27,9 @@ Your package.json file should now look like this:
  }
 }
 ```
-A devDependences section has been created, and Babel CLI plus a version number has been specified.  Running *npm install*, which installs all dependencies in the *package.json* file, will now install that version of Babel CLI.  The caret (^) in the version number means that only the major version number is fixed, i.e. the latest 6.x.x version will be installed.
+A devDependences section has been created, and Babel CLI plus a version number has been specified.  Running `npm install`, which installs all dependencies in the *package.json* file, will now install that version of Babel CLI.  The caret (^) in the version number means that only the major version number is fixed, i.e. the latest 6.x.x version will be installed.
 
-Okay, great, we’ve got Babel installed, and anyone who checks out our project will be able to install the same version by running *npm install*.  How do we use it?  First, we’ll need some JavaScript to transpile.  Create a JavaScript file.  This can be named whatever you like, but for this example we’ll call it *index.js*.  We’ll also place it in a folder called *src*, to better organise our project.  We’ll create a class in this file (*src/index.js*).
+Okay, great, we’ve got Babel installed, and anyone who checks out our project will be able to install the same version by running `npm install`.  How do we use it?  First, we’ll need some JavaScript to transpile.  Create a JavaScript file.  This can be named whatever you like, but for this example we’ll call it *index.js*.  We’ll also place it in a folder called *src*, to better organise our project.  We’ll create a class in this file (*src/index.js*).
 ```javascript
 class Example {
 
@@ -82,7 +82,7 @@ We’re pretty much sorted with Babel now.  There’s one more thing we can do t
   }
 }
 ```
-The key is the script name (*build*) and the value is the command to execute (*babel src --out-dir build*).  You can run the script via *npm run [script_name_here]*, so in this case, *npm run build*.  You could also add the watch script from earlier in the same way:
+The key is the script name (*build*) and the value is the command to execute (*babel src --out-dir build*).  You can run the script via `npm run [script_name_here]`, so in this case, `npm run build`.  You could also add the watch script from earlier in the same way:
 ```javascript
 {
   "name": "back-end-intro-to-js-part-one",

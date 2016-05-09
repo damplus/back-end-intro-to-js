@@ -1,4 +1,4 @@
-The first thing you’ll need to do for any modern JavaScript application is create a *package.json* file in the top level of your project.  This fulfils a similar purpose to a POM file, gradle.properties file, requirements.txt, etc.  You can either create one by hand or get npm to do this for you by running `npm init`.  For now I would suggest doing it by hand as you won’t need a lot of the fields `npm init` creates.
+The following tutorial will guide you through the process of using ES6/ES2015 via Babel.  This is part of the (whatever this series is called) series which can be found [here](http://www.damplus.com).  The first thing you’ll need to do for any modern JavaScript application is create a *package.json* file in the top level of your project.  This fulfils a similar purpose to a POM file, gradle.properties file, requirements.txt, etc.  You can either create one by hand or get npm to do this for you by running `npm init`.  For now I would suggest doing it by hand as you won’t need a lot of the fields `npm init` creates.
 
 ```javascript
 {

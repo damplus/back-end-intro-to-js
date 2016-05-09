@@ -2,13 +2,9 @@ The first thing you’ll need to do for any modern JavaScript application is cre
 
 ```javascript
 {
-
  "name": "back-end-intro-to-js-part-one",
-
  "version": "1.0.0",
-
  "description": "An introduction to JS for back-end programmers."
-
 }
 ```
 
@@ -23,19 +19,12 @@ This will install the Babel CLI.  You should be able to see it in the *node_modu
 Your package.json file should now look like this:
 ```javascript
 {
-
  "name": "back-end-intro-to-js-part-one",
-
  "version": "1.0.0",
-
  "description": "An introduction to JS for back-end programmers.",
-
  "devDependencies": {
-
    "babel-cli": "^6.7.7"
-
  }
-
 }
 ```
 A devDependences section has been created, and Babel CLI plus a version number has been specified.  Running *npm install*, which installs all dependencies in the *package.json* file, will now install that version of Babel CLI.  The caret (^) in the version number means that only the major version number is fixed, i.e. the latest 6.x.x version will be installed.
@@ -53,15 +42,10 @@ Now let’s run Babel on this file.
 This will output the transpiled code to the console.  You may notice that nothing has actually changed.  This is because we need to configure Babel with some plugins to handle our specific transpilation requirements.  We’ll need to create a *.babelrc* file in the top level of the project to specify these.
 ```javascript
 {
-
   "presets": [
-
     "es2015",
-
   ],
-
   "plugins": []
-
 }
 ```
 As well as being able to specify an array of plugins individually, Babel also has the concept of presets, which are bundles of plugins.  Here we specify the ES2015 (a.k.a. ES6) preset. We’ll also have to actually install the ES6 preset like so:
@@ -87,50 +71,29 @@ Notice we now use the *--out-dir* flag to specify an output directory.  Files fr
 We’re pretty much sorted with Babel now.  There’s one more thing we can do to make our lives easier.  Rather than having to remember/copy paste/type out our Babel command every time, it would be nice if we could just tell npm to build our project.  We can add a "scripts" property to our *package.json* file, and add a command like so:
 ```javascript
 {
-
   "name": "back-end-intro-to-js-part-one",
-
   "version": "1.0.0",
-
   "scripts": {
-
     "build": "babel src --out-dir build",
-
   },
-
   "devDependencies": {
-
     "babel-cli": "^6.7.7",
-
     "babel-preset-es2015": "^6.6.0"
-
   }
-
 }
 ```
 The key is the script name (*build*) and the value is the command to execute (*babel src --out-dir build*).  You can run the script via *npm run [script_name_here]*, so in this case, *npm run build*.  You could also add the watch script from earlier in the same way.
 ```javascript
 {
-
   "name": "back-end-intro-to-js-part-one",
-
   "version": "1.0.0",
-
   "scripts": {
-
     "build": "babel src --out-dir build",
-
     "watch": "babel --watch src --out-dir build"
-
   },
-
   "devDependencies": {
-
     "babel-cli": "^6.7.7",
-
     "babel-preset-es2015": "^6.6.0"
-
   }
-
 }
 ```

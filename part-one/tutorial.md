@@ -82,7 +82,7 @@ We’re pretty much sorted with Babel now.  There’s one more thing we can do t
   }
 }
 ```
-The key is the script name (*build*) and the value is the command to execute (*babel src --out-dir build*).  You can run the script via *npm run [script_name_here]*, so in this case, *npm run build*.  You could also add the watch script from earlier in the same way.
+The key is the script name (*build*) and the value is the command to execute (*babel src --out-dir build*).  You can run the script via *npm run [script_name_here]*, so in this case, *npm run build*.  You could also add the watch script from earlier in the same way:
 ```javascript
 {
   "name": "back-end-intro-to-js-part-one",
@@ -97,3 +97,4 @@ The key is the script name (*build*) and the value is the command to execute (*b
   }
 }
 ```
+This tutorial has hopefully shown a good starting point for your JavaScript toolchain.  With Babel set up, you can now write up to date JS without worrying about browser compatibility.  For simple projects this might be enough, but when things start getting more complex you'll find yourself reaching for modularisation and testing.  Further articles and tutorials in this series will cover those topics.    

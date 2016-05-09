@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the final product of following part one of the Back-End Intro to JS series.
+This is the final product of following part one of the Back-End Intro to JS series.  The tutorial can be found [here](https://github.com/damplus/back-end-intro-to-js/blob/master/part-one/tutorial.md).
 
 ## Requirements
 
